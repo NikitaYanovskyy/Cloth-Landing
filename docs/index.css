@@ -1,16 +1,16 @@
 @font-face {
   font-family: PopLight;
-  src: url("../fonts/Poppins-Light.ttf");
+  src: url("fonts/Poppins-Light.ttf");
 }
 
 @font-face {
   font-family: PopRegular;
-  src: url("../fonts/Poppins-Regular.ttf");
+  src: url("fonts/Poppins-Regular.ttf");
 }
 
 @font-face {
   font-family: PopMedium;
-  src: url("../fonts/Poppins-Medium.ttf");
+  src: url("fonts/Poppins-Medium.ttf");
 }
 
 .landing {
@@ -314,19 +314,19 @@ nav .busket li:last-of-type {
 }
 
 .landing-slide1 {
-  background-image: url(../images/cloth1.jpg);
+  background-image: url(images/cloth1.jpg);
 }
 
 .landing-slide2 {
-  background-image: url(../images/cloth2.jpg);
+  background-image: url(images/cloth2.jpg);
 }
 
 .landing-slide3 {
-  background-image: url(../images/cloth3.jpg);
+  background-image: url(images/cloth3.jpg);
 }
 
 .landing-slide4 {
-  background-image: url(../images/cloth4.jpg);
+  background-image: url(images/cloth4.jpg);
 }
 
 .active {
