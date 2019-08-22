@@ -105,7 +105,6 @@
 }
 
 nav {
-  margin-top: 10px !important;
   font-size: 14px;
   position: relative;
   z-index: 2;
@@ -123,6 +122,16 @@ nav .nav-wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+nav .nav-wrapper .logo-burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav .nav-wrapper .logo-burger svg {
+  margin: 5px 0;
 }
 
 nav .menu {
@@ -156,7 +165,7 @@ nav .menu li .pop-up-ul {
   font-size: 14px;
   background-color: transparent;
   display: none;
-  padding-top: 15px;
+  padding-top: 22px;
 }
 
 nav .menu li .pop-up-ul .col-wrapper {
@@ -328,6 +337,14 @@ nav .busket li:last-of-type {
   background-color: #a0a0a0 !important;
 }
 
+.mobile-height {
+  margin-bottom: 330px !important;
+}
+
+.mobile-display {
+  display: block !important;
+}
+
 *, *::before, *::after {
   font-family: PopLight !important;
   margin: 0;
@@ -401,42 +418,45 @@ li {
   padding: 15px 20px;
 }
 
-.burger {
-  width: 25px;
-  height: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.burger .subline {
-  width: 100%;
-  height: 3px;
-  background-color: #000;
-}
-
 @media screen and (max-width: 1024px) {
-  nav .nav-wrapper {
-    max-width: 1170px;
-    margin: 0 auto;
+  .top-bar .bar-info p:nth-child(1) {
+    padding-left: 24px;
+  }
+  .top-bar .bar-login p:nth-child(3) {
+    margin-right: 24px;
+  }
+  .burger {
+    width: 25px;
+    height: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .burger .subline {
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+  }
+  nav {
+    margin: 0 !important;
+    overflow: hidden;
+  }
+  nav .nav-wrapper {
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
   }
   nav .nav-wrapper .logo-burger {
+    display: block;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -448,180 +468,25 @@ li {
     margin: 10px 20px;
   }
   nav .menu {
+    display: none;
     border-top: 1px solid #a0a0a0;
     position: absolute;
     left: 140px;
-    top: 50px;
-    display: block;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    top: 65px;
     padding-top: 15px;
   }
   nav .menu li {
     margin: 15px 0;
-    font-weight: bold;
-  }
-  nav .menu li a {
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-  }
-  nav .menu li a:hover {
-    color: #a0a0a0;
   }
   nav .menu li .pop-up-ul {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 3;
-    font-size: 14px;
-    background-color: transparent;
-    display: none;
-    padding-top: 15px;
-  }
-  nav .menu li .pop-up-ul .col-wrapper {
-    max-width: 1170px;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  nav .menu li .pop-up-ul .col-wrapper .pop-up-col {
-    -webkit-box-flex: 0,1,20%;
-        -ms-flex: 0,1,20%;
-            flex: 0,1,20%;
-  }
-  nav .menu li .pop-up-ul .col-wrapper .pop-up-col ul li {
-    padding-right: 25px;
-  }
-  nav .menu li .pop-up-ul .pop-up-wrapper {
-    border-top: 1px solid #a0a0a0;
-    border-bottom: 1px solid #a0a0a0;
-    background-color: #fff;
-  }
-  nav .menu li .pop-up-ul .pop-up-wrapper ul {
-    max-width: 1170px;
-    margin: 0 auto;
-    margin-top: 30px !important;
-    margin-bottom: 30px !important;
-  }
-  nav .menu li .pop-up-ul .pop-up-wrapper ul li {
-    margin: 25px 0;
-    font-weight: normal;
-  }
-  nav .menu li .pop-up-ul .pop-up-wrapper ul li a {
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-  }
-  nav .menu li .pop-up-ul .pop-up-wrapper ul li a:hover {
-    color: #a0a0a0;
-  }
-  nav .menu li .pop-up-ul .pop-up-wrapper ul li:first-of-type {
-    margin: 0 0 15px 0;
-  }
-  nav .menu li .sales-btn {
-    color: red;
-  }
-  nav .menu li .sales-btn:hover {
-    color: #fa7373;
-  }
-  nav .menu li:hover .pop-up-ul {
-    display: block;
+    display: none !important;
   }
   nav .busket {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     margin-right: 20px;
     height: 76px;
-  }
-  nav .busket li {
-    margin: 0 15px;
-    font-weight: bold;
-  }
-  nav .busket li a {
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-  }
-  nav .busket li a span {
-    background-color: orange;
-    padding: 3px 10px;
-    border-radius: 50px;
-    color: #fff !important;
-  }
-  nav .busket li a:hover {
-    color: #a0a0a0;
-  }
-  nav .busket li:last-of-type {
-    margin: 0 0 0 15px;
-  }
-  .carousel {
-    height: 400px;
-    width: 100%;
-    position: relative;
-  }
-  .landing-slide {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    opacity: 0;
-  }
-  .landing-slide .landing-title {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-color: #0009;
-    color: #fff;
-  }
-  .landing-slide .landing-title h1 {
-    margin-top: 230px;
-    font-size: calc(18px + 3vmin);
-  }
-  .landing-buttons {
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    top: 90%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -80%);
-            transform: translate(-50%, -80%);
-    z-index: 1;
-  }
-  .landing-buttons .landing-btn {
-    width: 15px;
-    height: 15px;
-    background-color: #fff;
-    border-radius: 25px;
-    margin: 15px;
-    cursor: pointer;
-  }
-  .landing-slide1 {
-    background-image: url(../images/cloth1.jpg);
-  }
-  .landing-slide2 {
-    background-image: url(../images/cloth2.jpg);
-  }
-  .landing-slide3 {
-    background-image: url(../images/cloth3.jpg);
-  }
-  .landing-slide4 {
-    background-image: url(../images/cloth4.jpg);
-  }
-  .active {
-    opacity: 1;
-  }
-  .active-btn {
-    background-color: #a0a0a0 !important;
   }
 }
 /*# sourceMappingURL=index.css.map */

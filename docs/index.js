@@ -40,4 +40,26 @@ landingButtons.forEach((e , i) => {
 //////////////////////////////////
 
 
+////////////////Mobile Menu Button
+const burger = document.querySelector(`.burger`);
+const navWrapper = document.querySelector(`.nav-wrapper`);
+const menu = document.querySelector(`.menu`);
+let check = false;
+burger.addEventListener(`click` ,()=>{
+    if (check == false){
+        navWrapper.style.marginBottom = `330px`;
+        menu.style.display = `block`;
+        check = true;
+    }else if (check == true){
+        navWrapper.style.marginBottom = `0 `;
+        setTimeout(() => {
+            menu.style.display = `none`;
+        }, 400);        
+        check = false;
+    }
+    
+})
+//////////////////////////////////
+
+
 

@@ -64,11 +64,16 @@
 
 /////////////////////////////Navigation
 nav{
-    margin-top: 10px !important;
     font-size: 14px;
     position: relative;
     z-index: 2;
     .nav-wrapper{
+        .logo-burger{
+            display: flex;
+            svg{
+                margin: 5px 0;
+            }
+        }
     @include maxWidth;
     display: flex;
     align-items: center;
@@ -95,7 +100,7 @@ nav{
     font-size: 14px;
     background-color: transparent;
     display: none;
-    padding-top: 15px;
+    padding-top: 22px;
         
         .col-wrapper{
             @include maxWidth;
@@ -229,5 +234,11 @@ nav{
 }
 .active-btn{
     background-color: $hoverColor !important;
+}
+.mobile-height{
+    margin-bottom: 330px !important;
+}
+.mobile-display{
+    display: block !important;
 }
 /////////////////////////////////////////////
