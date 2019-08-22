@@ -18,7 +18,7 @@ $hoverColor: rgb(160, 160, 160);
     font-family: PopMedium;
     src: url('../fonts/Poppins-Medium.ttf')
 }
-@import "./landing";
+@import "./docs/styles/landing";
 *,*::before,*::after{
     font-family: PopLight !important;
     margin: 0;
