@@ -18,7 +18,13 @@ $hoverColor: rgb(160, 160, 160);
     font-family: PopMedium;
     src: url('fonts/Poppins-Medium.ttf')
 }
+
+//////////////////////////////// Import
 @import "styles/landing";
+@import "styles/underlanding";
+////////////////////////////////
+
+
 *,*::before,*::after{
     font-family: PopLight !important;
     margin: 0;
@@ -178,6 +184,12 @@ li{
         }
     }
     ///////////////////////////// 
+
+    /////////////////////////////////////////////////Underlanding
+    .banner{
+        margin: 70px 20px;
+    }
+    ///////////////////////////////////////////////////////////////
 }
 
 @media screen and (max-width: 768px){
@@ -200,6 +212,12 @@ li{
         }           
     }
     /////////////////////////////
+
+    /////////////////////////////////////////////////Underlanding
+    .banner{
+        height: 250px;
+    }
+    ///////////////////////////////////////////////////////////////
 }
 
 @media screen and (max-width: 425px){
@@ -218,5 +236,19 @@ li{
             top: 80px;
             padding-top: 15px;
         }
-    }          
+        
+    }     
+    /////////////////////////////////////////////////Underlanding
+    .underlanding{
+        flex-direction: column;
+        justify-content: center !important;
+    }
+    .banner{
+        width: 91%;
+        margin: 10px 20px;
+    }
+    .banner1{
+        margin-top: 60px;
+    }
+    ///////////////////////////////////////////////////////////////     
 }

@@ -36,7 +36,7 @@ var j = -1;
             }   
             landingButtons[j].classList.add(`active-btn`);
             landingSlides[j].classList.add(`active`);
-               setTimeout( arguments.callee, 3000 );    
+               setTimeout( arguments.callee, 4000 );    
            }
            if(j == landingButtons.length-1){
                j = -1;

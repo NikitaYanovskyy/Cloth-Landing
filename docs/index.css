@@ -346,6 +346,73 @@ nav .busket li:last-of-type {
   display: block !important;
 }
 
+.underlanding {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.banner {
+  height: 560px;
+  width: 49%;
+  margin: 70px 0;
+}
+
+.banner h1 {
+  font-size: calc(12px + 2vmin);
+}
+
+.banner a {
+  background-color: #fff;
+  padding: 10px 50px;
+  margin-top: 30px;
+  font-weight: bold;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.banner a:hover {
+  background-color: #272727;
+  color: #fff;
+}
+
+.banner1 {
+  background-image: url(images/cloth5.jpg);
+  margin-right: auto;
+}
+
+.banner2 {
+  background-image: url(images/cloth6.jpg);
+  background-color: lightgreen;
+}
+
+.banner-text-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #0009;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
 *, *::before, *::after {
   font-family: PopLight !important;
   margin: 0;
@@ -518,6 +585,9 @@ li {
     margin-right: 20px;
     height: 76px;
   }
+  .banner {
+    margin: 70px 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -532,6 +602,9 @@ li {
   nav .menu {
     display: none;
   }
+  .banner {
+    height: 250px;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -545,6 +618,22 @@ li {
     left: 55px;
     top: 80px;
     padding-top: 15px;
+  }
+  .underlanding {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  .banner {
+    width: 91%;
+    margin: 10px 20px;
+  }
+  .banner1 {
+    margin-top: 60px;
   }
 }
 /*# sourceMappingURL=index.css.map */
