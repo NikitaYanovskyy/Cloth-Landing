@@ -19,20 +19,45 @@ cross.addEventListener(`click`, ()=>{
 })
 //////////////////////////////////
 
-//////////////////Landing Carousel
+/////////////////////////////////////////////////////////////     Landing Carousel
 const landingButtons = document.querySelectorAll(`.landing-btn`);
 const landingSlides = document.querySelectorAll(`.landing-slide`);
+var counter = 0;
+
+//////////////////AutoSlide
+var j = -1;
+(function() {
+        return function() {   
+           if ( ++j < landingButtons.length ) {   
+            for (let i = 0; i < landingButtons.length; i++) {
+                landingButtons[i].classList.remove(`active-btn`);
+                landingSlides[i].style.transition = `all 0.3s ease-in-out`;
+                landingSlides[i].classList.remove(`active`);
+            }   
+            landingButtons[j].classList.add(`active-btn`);
+            landingSlides[j].classList.add(`active`);
+               setTimeout( arguments.callee, 3000 );    
+           }
+           if(j == landingButtons.length-1){
+               j = -1;
+           }
+        }();    
+})(); 
+///////////////////////////
 
 landingButtons.forEach((e , i) => {
     e.addEventListener(`click` , ()=>{
+        if(i == landingButtons.length-1){
+            j = -1;
+        }else{
+            j = i;
+        }       
         for (let i = 0; i < landingButtons.length; i++) {
             landingButtons[i].classList.remove(`active-btn`);
+            landingSlides[i].style.transition = `all 0.3s ease-in-out`;
+            landingSlides[i].classList.remove(`active`);
         }
         landingButtons[i].classList.add(`active-btn`);
-        for (let i = 0; i < landingButtons.length; i++) {
-            landingSlides[i].style.transition = `all 0.3s ease-in-out`;
-            landingSlides[i].classList.remove(`active`);          
-        }
         landingSlides[i].classList.add(`active`);
     })
 });
@@ -41,7 +66,7 @@ landingButtons.forEach((e , i) => {
 
 ////////////////Mobile Menu Button
 const burger = document.querySelector(`.burger`);
-const burgerLines = document.querySelectorAll(`.burger .subline`);
+const subLine = document.querySelector(`.subline`);
 const navWrapper = document.querySelector(`.nav-wrapper`);
 const menu = document.querySelector(`.menu`);
 let check = false;
@@ -51,17 +76,9 @@ burger.addEventListener(`click` ,()=>{
         menu.style.display = `block`;
         check = true;
         //Animation
-        burgerLines.forEach(e =>{
-            e.style.transition = `all 0.3s ease-in-out`;
-        })
-        burgerLines[1].style.display = `none`;
-        burgerLines[0].style.top = `50%`;
-        burgerLines[0].style.transform = `translate(0,-50%)`;
-        burgerLines[2].style.bottom = `50%`;
-        burgerLines[2].style.transform = `translate(0,50%)`;
+        burger.classList.add(`active`);
         setTimeout(()=>{
-        burgerLines[0].style.transform = `rotate3d(0,0,1,-45deg)`;
-        burgerLines[2].style.transform = `rotate3d(0,0,1,45deg)`;
+            burger.classList.add(`rotate`);
         },500);
     }else if (check == true){
         navWrapper.style.marginBottom = `0 `;
@@ -70,13 +87,10 @@ burger.addEventListener(`click` ,()=>{
         }, 400);        
         check = false;
 
-        //Animation     
-            burgerLines[0].style.transform = `rotate(0deg)`;
-            burgerLines[2].style.transform = `rotate(0deg)`;
-        setTimeout(()=>{    
-        burgerLines[1].style.display = `block`;
-        burgerLines[0].style.top = `0`;    
-        burgerLines[2].style.bottom = `0`;
+        //Animation    
+        burger.classList.remove(`rotate`); 
+        setTimeout(()=>{
+            burger.classList.remove(`active`);
         },500);
     }
     
