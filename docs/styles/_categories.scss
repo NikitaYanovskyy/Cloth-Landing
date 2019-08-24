@@ -1,0 +1,42 @@
+.categories{
+    @include maxWidth;
+    h2{
+        margin: 20px 0;
+    }
+}
+.categories-carousel{
+    overflow-x: scroll;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.categories-carousel::-webkit-scrollbar{
+    display: none;
+}
+.categories-carousel-elem{
+    flex: 0 0 auto;
+    text-align: center;
+    width: 300px;
+    a{
+    display: block; 
+    margin: 0 12px;
+    font-size: 0;
+    background-color: #fff;
+        img{
+            @include Transition;
+            width: 100%;
+            height: 276px;
+            object-fit: cover;
+        }
+        h1{
+            font-size: 20px;
+            padding: 7px 0;
+        }
+    }
+}
+.categories-carousel-elem:hover {
+    a{
+        img{
+            opacity: 0.7;
+        }
+    }
+}
