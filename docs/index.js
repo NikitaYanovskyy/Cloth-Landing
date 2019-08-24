@@ -96,7 +96,34 @@ burger.addEventListener(`click` ,()=>{
     
 })
 
-//////////////////////////////////
+//////////////////////////////////////////////
+const eye = document.querySelectorAll(`.eye`);
+const star = document.querySelectorAll(`.star`);
+const popUpEye = document.querySelectorAll(`.pop-up-eye`);
+const popUpStar = document.querySelectorAll(`.pop-up-star`);
+
+
+eye.forEach((e,i) =>{
+    e.addEventListener(`mouseover` , ()=>{
+        popUpEye[i].style.opacity = `1`;
+    })
+})
+star.forEach((e,i) =>{
+    e.addEventListener(`mouseover` , ()=>{
+        popUpStar[i].style.opacity = `1`;
+    })
+})
+eye.forEach((e,i) =>{
+    e.addEventListener(`mouseout` , ()=>{
+        popUpEye[i].style.opacity = `0`;
+    })
+})
+star.forEach((e,i) =>{
+    e.addEventListener(`mouseout` , ()=>{
+        popUpStar[i].style.opacity = `0`;
+    })
+})
+/////////////////////////////////////////////
 
 
 

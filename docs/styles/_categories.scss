@@ -15,28 +15,37 @@
 .categories-carousel-elem{
     flex: 0 0 auto;
     text-align: center;
-    width: 300px;
+    width: 293px;
     a{
     display: block; 
     margin: 0 12px;
     font-size: 0;
-    background-color: #fff;
-        img{
+   img{
+            background-color: #fff;
             @include Transition;
             width: 100%;
             height: 276px;
             object-fit: cover;
         }
         h1{
+            background-color: #fff;
             font-size: 20px;
             padding: 7px 0;
         }
     }
 }
-.categories-carousel-elem:hover {
+.categories-carousel-elem:first-of-type{
     a{
-        img{
-            opacity: 0.7;
-        }
+      margin-left: 0;
+    }
+}
+.categories-carousel-elem:last-of-type{
+    a{
+      margin-right: 0;
+    }
+}
+.categories-carousel-elem a:hover {
+    img{
+        opacity: 0.7;
     }
 }

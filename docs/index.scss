@@ -23,6 +23,8 @@ $hoverColor: rgb(160, 160, 160);
 @import "styles/landing";
 @import "styles/underlanding";
 @import "styles/categories";
+@import "styles/blog";
+@import "styles/onGoing";
 ////////////////////////////////
 
 
@@ -209,6 +211,53 @@ li{
         margin: 0 20px;
         }
     }
+    .categories-carousel-elem:first-of-type{
+        a{
+          margin-left: 20px;
+        }
+    }
+    .categories-carousel-elem:last-of-type{
+        a{
+          margin-right: 20px;
+        }
+    }
+    /////////////////////////////////////////////////////Blog
+    .blog{
+        h2{
+            margin-left: 20px;
+        }
+    }
+    .blog-element:last-of-type{
+        a{
+            margin-right: 20px;
+        }
+    }
+    .blog-element:first-of-type{
+        a{
+            margin-left: 20px;
+        }
+    }
+
+    .onGoing-carousel-elem a:first-of-type{
+        margin-left: 20px;
+    }
+    .onGoing-carousel-elem a:last-of-type{
+        margin-right: 20px;
+    }
+    .onGoing-carousel-elem{
+        a{
+        display: block; 
+        margin: 0 12px;
+         .img-wrapper{
+            .eye{
+                top: 15px;
+                opacity: 1;
+            }
+        }
+       
+        }
+        
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -237,6 +286,23 @@ li{
         height: 250px;
     }
     ///////////////////////////////////////////////////////////////
+
+    ///////////////////////////////////////////////////////////////Blog
+    .blog{
+        margin-top: 100px;
+    }
+    .blog-flex{
+        flex-wrap: wrap;
+    }
+    .blog-element{
+        width: 50%;
+        a{
+            margin: 0 12px 50px 24px;
+            img{
+                height: 228px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 425px){
@@ -270,4 +336,16 @@ li{
         margin-top: 60px;
     }
     ///////////////////////////////////////////////////////////////     
+
+        ///////////////////////////////////////////////////////////////Blog
+        .blog-element{
+            width: 50%;
+            a{
+                margin: 0 12px 50px 12px;
+                img{
+                    height: 120px;
+                }
+            }
+        
+    }
 }

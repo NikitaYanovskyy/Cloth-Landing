@@ -441,17 +441,17 @@ nav .busket li:last-of-type {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   text-align: center;
-  width: 300px;
+  width: 293px;
 }
 
 .categories-carousel-elem a {
   display: block;
   margin: 0 12px;
   font-size: 0;
-  background-color: #fff;
 }
 
 .categories-carousel-elem a img {
+  background-color: #fff;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   width: 100%;
@@ -461,12 +461,249 @@ nav .busket li:last-of-type {
 }
 
 .categories-carousel-elem a h1 {
+  background-color: #fff;
   font-size: 20px;
   padding: 7px 0;
 }
 
-.categories-carousel-elem:hover a img {
+.categories-carousel-elem:first-of-type a {
+  margin-left: 0;
+}
+
+.categories-carousel-elem:last-of-type a {
+  margin-right: 0;
+}
+
+.categories-carousel-elem a:hover img {
   opacity: 0.7;
+}
+
+.blog {
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.blog h2 {
+  margin: 20px 0;
+}
+
+.blog-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blog-element {
+  width: 293px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.blog-element a {
+  display: block;
+  margin: 0 12px;
+  height: 100%;
+}
+
+.blog-element a img {
+  background-color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: 173px;
+}
+
+.blog-element a:hover img {
+  opacity: 0.7;
+}
+
+.blog-element:last-of-type a {
+  margin-right: 0;
+}
+
+.blog-element:first-of-type a {
+  margin-left: 0;
+}
+
+.categories {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.categories h2 {
+  margin: 20px 0;
+}
+
+.categories-carousel {
+  overflow-x: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.categories-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.onGoing-carousel-elem {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 293px;
+}
+
+.onGoing-carousel-elem a {
+  display: block;
+  margin: 0 12px;
+}
+
+.onGoing-carousel-elem a .img-wrapper {
+  position: relative;
+}
+
+.onGoing-carousel-elem a .img-wrapper .pop-up {
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  right: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+}
+
+.onGoing-carousel-elem a .img-wrapper .pop-up .pop-up-text {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #fff;
+}
+
+.onGoing-carousel-elem a .img-wrapper .pop-up .pop-up-text small {
+  padding: 15px;
+  font-weight: bold;
+}
+
+.onGoing-carousel-elem a .img-wrapper .pop-up .arrow {
+  position: static;
+  margin-left: -6px;
+  opacity: 1;
+  border-radius: 0;
+  background-color: unset;
+  padding: 0;
+  fill: #fff;
+}
+
+.onGoing-carousel-elem a .img-wrapper .pop-up-eye {
+  top: 18px;
+  opacity: 0;
+}
+
+.onGoing-carousel-elem a .img-wrapper .pop-up-star {
+  top: 58px;
+  opacity: 0;
+}
+
+.onGoing-carousel-elem a .img-wrapper svg {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  opacity: 0;
+  right: 10px;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 25px;
+}
+
+.onGoing-carousel-elem a .img-wrapper .star {
+  top: 55px;
+}
+
+.onGoing-carousel-elem a .img-wrapper .eye {
+  top: 15px;
+}
+
+.onGoing-carousel-elem a .img-wrapper .sizes {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  position: absolute;
+  height: 90px;
+  bottom: 0;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.onGoing-carousel-elem a .img-wrapper .sizes div {
+  margin: 10px;
+}
+
+.onGoing-carousel-elem a img {
+  background-color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: 276px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.onGoing-carousel-elem .onGoing-text {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.onGoing-carousel-elem .onGoing-text .desc {
+  display: block;
+  width: 70%;
+}
+
+.onGoing-carousel-elem .onGoing-text .desc small {
+  display: block;
+}
+
+.onGoing-carousel-elem .onGoing-text .price {
+  text-align: right;
+}
+
+.onGoing-carousel-elem:first-of-type a {
+  margin-left: 0;
+}
+
+.onGoing-carousel-elem:last-of-type a {
+  margin-right: 0;
+}
+
+.onGoing-carousel-elem a:hover img {
+  opacity: 0.7;
+}
+
+.onGoing-carousel-elem a:hover svg {
+  opacity: 1;
+}
+
+.onGoing-carousel-elem a:hover .sizes {
+  opacity: 1;
 }
 
 *, *::before, *::after {
@@ -662,6 +899,35 @@ li {
   .categories-carousel-elem a {
     margin: 0 20px;
   }
+  .categories-carousel-elem:first-of-type a {
+    margin-left: 20px;
+  }
+  .categories-carousel-elem:last-of-type a {
+    margin-right: 20px;
+  }
+  .blog h2 {
+    margin-left: 20px;
+  }
+  .blog-element:last-of-type a {
+    margin-right: 20px;
+  }
+  .blog-element:first-of-type a {
+    margin-left: 20px;
+  }
+  .onGoing-carousel-elem a:first-of-type {
+    margin-left: 20px;
+  }
+  .onGoing-carousel-elem a:last-of-type {
+    margin-right: 20px;
+  }
+  .onGoing-carousel-elem a {
+    display: block;
+    margin: 0 12px;
+  }
+  .onGoing-carousel-elem a .img-wrapper .eye {
+    top: 15px;
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -678,6 +944,22 @@ li {
   }
   .banner {
     height: 250px;
+  }
+  .blog {
+    margin-top: 100px;
+  }
+  .blog-flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .blog-element {
+    width: 50%;
+  }
+  .blog-element a {
+    margin: 0 12px 50px 24px;
+  }
+  .blog-element a img {
+    height: 228px;
   }
 }
 
@@ -708,6 +990,15 @@ li {
   }
   .banner1 {
     margin-top: 60px;
+  }
+  .blog-element {
+    width: 50%;
+  }
+  .blog-element a {
+    margin: 0 12px 50px 12px;
+  }
+  .blog-element a img {
+    height: 120px;
   }
 }
 /*# sourceMappingURL=index.css.map */
