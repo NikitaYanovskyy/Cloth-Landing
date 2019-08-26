@@ -25,6 +25,7 @@ $hoverColor: rgb(160, 160, 160);
 @import "styles/categories";
 @import "styles/blog";
 @import "styles/onGoing";
+@import "styles/footer";
 ////////////////////////////////
 
 
@@ -86,7 +87,7 @@ li{
 }
 //////////////////////////////////////////////////////
 
-
+///////////////////////////////////////////////////////////////////////////////////////////////////Media 1024px
 @media screen and (max-width: 1024px){
     ///////////////////////////Top bar
 .top-bar{   
@@ -258,8 +259,16 @@ li{
         }
         
     }
+    /////////////////////////////////////////////////////////////Footer
+    .footer-content{
+        padding: 70px 0;
+        margin: 0 20px;
+    }
+    .copyright{
+        padding: 10px 20px 40px 20px;
+    }
 }
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////Media 768px
 @media screen and (max-width: 768px){
     ///////////////////////////Top bar
     .top-bar{   
@@ -303,8 +312,30 @@ li{
             }
         }
     }
+    //////////////////////////////////////////////Footer
+    footer{
+        form{
+            width: 50%;
+        }
+    }
+    .footer-content{
+        flex-direction: column;
+        padding: 40px 0;
+        margin: 0 20px;
+        border-bottom: 1px solid #fff;
+    }
+    .footer-contacts{
+        border-bottom: 1px solid #fff;
+        padding-bottom: 50px;
+        margin-bottom: 20px;
+    }
+    .footer-nav{
+        border-bottom: 1px solid #fff;
+        padding-bottom: 50px;
+        margin-bottom: 20px;
+    }
 }
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////Media 425px
 @media screen and (max-width: 425px){
       /////////////////////////////Navigation
       nav{     
@@ -347,5 +378,11 @@ li{
                 }
             }
         
+    }
+    /////////////////////////////////////Footer
+    footer{
+        form{
+            width: 80%;
+        }
     }
 }
