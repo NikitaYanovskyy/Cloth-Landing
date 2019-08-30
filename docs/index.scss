@@ -25,6 +25,7 @@ $hoverColor: rgb(160, 160, 160);
 @import "styles/categories";
 @import "styles/blog";
 @import "styles/onGoing";
+@import "styles/brands";
 @import "styles/footer";
 ////////////////////////////////
 
@@ -267,6 +268,35 @@ li{
     .copyright{
         padding: 10px 20px 40px 20px;
     }
+    //////////////////////////////////////////////////////////////////Brands
+    .brands{
+        @include maxWidth;
+        position: relative;
+        h2{
+            margin: 20px 20px;
+        }
+    }
+    .brands-carousel{
+    @include Transition;
+    display: flex;
+    width: 1296px;
+}
+
+
+    .brands-carousel-wrapper{
+        @include maxWidth;
+        overflow: hidden;
+        margin: 0 20px;
+    }
+    #prevbtn{
+        display: none;
+    }
+    #nextbtn{
+        display: none;
+    }
+    .brand-buttons{
+        display: flex;
+    }
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////Media 768px
 @media screen and (max-width: 768px){
@@ -334,7 +364,13 @@ li{
         padding-bottom: 50px;
         margin-bottom: 20px;
     }
+    /////////////////////////////////////////////////Brands
+
+    .brand-desktop-btn{
+        display: block;
+    }
 }
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////Media 425px
 @media screen and (max-width: 425px){
       /////////////////////////////Navigation
@@ -384,5 +420,12 @@ li{
         form{
             width: 80%;
         }
+    }
+    /////////////////////////////////////////////////Brands
+    .brands-carousel-element:first-child{
+        margin-left: 40px !important;
+    }
+    .brand-mobile-btn{
+        display: block;
     }
 }

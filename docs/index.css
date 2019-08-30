@@ -316,7 +316,7 @@ nav .busket li:last-of-type {
 }
 
 .landing-slide1 {
-  background-image: url(images/cloth1.jpg);
+  background-image: url(images/cloth4.jpg);
 }
 
 .landing-slide2 {
@@ -328,7 +328,7 @@ nav .busket li:last-of-type {
 }
 
 .landing-slide4 {
-  background-image: url(images/cloth4.jpg);
+  background-image: url(images/cloth1.jpg);
 }
 
 .active {
@@ -530,6 +530,7 @@ nav .busket li:last-of-type {
 .categories {
   max-width: 1170px;
   margin: 0 auto;
+  margin-top: 100px;
 }
 
 .categories h2 {
@@ -636,7 +637,8 @@ nav .busket li:last-of-type {
   transition: all 0.3s ease-in-out;
   background-color: #fff;
   position: absolute;
-  height: 90px;
+  left: 0;
+  right: 0;
   bottom: 0;
   opacity: 0;
   display: -webkit-box;
@@ -706,6 +708,97 @@ nav .busket li:last-of-type {
   opacity: 1;
 }
 
+.brands {
+  max-width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.brands h2 {
+  margin: 20px 0;
+}
+
+.brands-carousel-wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#prevbtn {
+  position: absolute;
+  cursor: pointer;
+  left: -50px;
+  top: 90px;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+#nextbtn {
+  position: absolute;
+  cursor: pointer;
+  right: -40px;
+  top: 90px;
+}
+
+.brands-carousel {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1296px;
+}
+
+.brands-carousel-element {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin: 0 9px;
+  background-color: #fff;
+}
+
+.brands-carousel-element img {
+  padding: 8px;
+  width: 113px;
+  height: 100px;
+}
+
+.brands-carousel-element:first-child {
+  margin-left: 0 !important;
+}
+
+.brands-carousel-element:last-child {
+  margin-right: 0 !important;
+}
+
+.brand-buttons {
+  position: absolute;
+  left: 50%;
+  bottom: -50px;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  display: none;
+}
+
+.brand-buttons .brand-button {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 25px;
+  margin: 0 5px;
+}
+
+.brand-buttons .brand-active {
+  background-color: #a0a0a0;
+}
+
+.brand-mobile-btn {
+  display: none;
+}
+
+.brand-desktop-btn {
+  display: none;
+}
+
 footer {
   margin-top: 100px;
   background-color: #1F2023;
@@ -749,6 +842,7 @@ footer form input {
 }
 
 footer form button {
+  cursor: pointer;
   background-color: #04B46A;
   height: 100%;
   width: 30%;
@@ -1050,6 +1144,39 @@ li {
   .copyright {
     padding: 10px 20px 40px 20px;
   }
+  .brands {
+    max-width: 1170px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .brands h2 {
+    margin: 20px 20px;
+  }
+  .brands-carousel {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1296px;
+  }
+  .brands-carousel-wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin: 0 20px;
+  }
+  #prevbtn {
+    display: none;
+  }
+  #nextbtn {
+    display: none;
+  }
+  .brand-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -1105,6 +1232,9 @@ li {
     padding-bottom: 50px;
     margin-bottom: 20px;
   }
+  .brand-desktop-btn {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -1146,6 +1276,12 @@ li {
   }
   footer form {
     width: 80%;
+  }
+  .brands-carousel-element:first-child {
+    margin-left: 40px !important;
+  }
+  .brand-mobile-btn {
+    display: block;
   }
 }
 /*# sourceMappingURL=index.css.map */

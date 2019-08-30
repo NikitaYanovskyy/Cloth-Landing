@@ -126,4 +126,88 @@ star.forEach((e,i) =>{
 /////////////////////////////////////////////
 
 
+//////////////////////////////////////////Brand Carousel
+//Dots
+const brandsCarouselElements = document.querySelectorAll(`.brands-carousel-element`);
+const brandsFirstChild = document.querySelector(`.brands-carousel-element:first-child`);
+const brandsLastChild = document.querySelector(`.brands-carousel-element:last-child`);
+const brandButton = document.querySelectorAll(`.brand-button`);
 
+const prev = document.querySelector(`#prevbtn`);
+const next = document.querySelector(`#nextbtn`);
+const carousel = document.querySelector(`.brands-carousel`);
+
+
+brandsCarouselElements.forEach(e => {
+    if(window.matchMedia("(min-width: 768px)").matches && window.matchMedia("(max-width: 1025px)").matches){
+        e.style.margin = `0 16px`;   
+        carousel.style.transform = `translateX(${-725 + 145 * -3}px)`
+    }
+    if(window.matchMedia("(min-width: 0px)").matches && window.matchMedia("(max-width: 425px)").matches){
+        carousel.style.transform = `translateX(${193 * -8}px)`;
+        e.style.margin = `0 40px`;    }
+    if(window.matchMedia("(min-width: 440px)").matches && window.matchMedia("(max-width: 768px)").matches){
+        e.style.margin = `0 19px`; 
+        carousel.style.transform = `translateX(${-725 + 160 * -3}px)`
+    }           
+});
+
+brandButton.forEach((e,i) =>{
+    e.addEventListener(`click` , ()=>{
+        for (let i = 0; i < brandButton.length; i++) {
+            brandButton[i].style.backgroundColor = `#000`;
+        }
+        e.style.backgroundColor = `#a0a0a0`;
+        brandsCarouselElements.forEach(e => {
+            if(window.matchMedia("(min-width: 768px)").matches && window.matchMedia("(max-width: 1025px)").matches){
+                e.style.transform = `translateX(${145 * -i}px)`;
+            }
+            if(window.matchMedia("(min-width: 0px)").matches && window.matchMedia("(max-width: 425px)").matches){
+                e.style.transform = `translateX(${193 * -i}px)`;
+            }
+            if(window.matchMedia("(min-width: 440px)").matches && window.matchMedia("(max-width: 768px)").matches){
+                e.style.transform = `translateX(${151 * -i}px)`;
+            }           
+        });
+    })
+})
+
+//Arrows
+
+var counter = 0;
+var size = 131;
+var begining = -size * 8;
+
+if(window.matchMedia("(min-width: 1124px)").matches){
+    carousel.style.transform = `translateX(${begining}px)`;   
+}
+
+
+next.addEventListener(`click` , ()=>{
+        counter++;
+        console.log(counter);                 
+        carousel.addEventListener('transitionend' , ()=>{
+            if(counter >= 12){
+                carousel.style.transition = `none`;
+            carousel.style.transform = `translateX(${begining}px)`;
+            counter = 0;
+            }
+        })   
+            carousel.style.transition = `all 0.3s ease-in-out`;
+            carousel.style.transform = `translateX(${-size * counter + begining}px)`;   
+})
+
+prev.addEventListener(`click` , ()=>{
+    counter--;
+    console.log(counter);                 
+    carousel.addEventListener('transitionend' , ()=>{
+        if(counter <= -8){
+        carousel.style.transition = `none`;
+        carousel.style.transform = `translateX(${-size * 4 + begining}px)`;
+        counter = 4;
+        }
+    })   
+        carousel.style.transition = `all 0.3s ease-in-out`;
+        carousel.style.transform = `translateX(${size * -counter + begining}px)`;   
+})
+////////////////////////////////////////////////////////

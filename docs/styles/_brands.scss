@@ -1,0 +1,70 @@
+.brands{
+    @include maxWidth;
+    position: relative;
+    h2{
+        margin: 20px 0;
+    }
+}
+.brands-carousel-wrapper{
+    @include maxWidth;
+    overflow: hidden;
+}
+#prevbtn{
+    position: absolute;
+    cursor: pointer;
+    left: -50px;
+    top: 90px;
+    transform: rotate(-180deg);
+}
+#nextbtn{
+    position: absolute;
+    cursor: pointer;
+    right: -40px;
+    top: 90px;
+}
+
+.brands-carousel{
+    @include Transition;
+    display: flex;
+    width: 1296px;
+}
+
+.brands-carousel-element{
+    @include Transition;
+    margin: 0 9px;
+    background-color: #fff;
+    img{
+        padding: 8px;
+        width: 113px;
+        height: 100px;
+    }
+}
+.brands-carousel-element:first-child{
+    margin-left: 0 !important;
+}
+.brands-carousel-element:last-child{
+    margin-right: 0 !important;
+}
+.brand-buttons{
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    transform: translate(-50% , 0);
+    display: none;
+    .brand-button{
+        width: 10px;
+        height: 10px;
+        background-color: #000;
+        border-radius: 25px;
+        margin: 0 5px;
+    }
+    .brand-active{
+        background-color: $hoverColor;
+    }
+}
+.brand-mobile-btn{
+    display: none;
+}
+.brand-desktop-btn{
+    display: none;
+}
