@@ -7,7 +7,7 @@
 }
 .brands-carousel-wrapper{
     @include maxWidth;
-    overflow: hidden;
+    overflow: hidden; 
 }
 #prevbtn{
     position: absolute;

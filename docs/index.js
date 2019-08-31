@@ -211,3 +211,24 @@ prev.addEventListener(`click` , ()=>{
         carousel.style.transform = `translateX(${size * -counter + begining}px)`;   
 })
 ////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////Search Bar
+const formSubmit = document.querySelector(`#search input:nth-of-type(1)`);
+const formType = document.querySelector(`#search input:nth-of-type(2)`);
+const line = document.querySelector(`#form-line`);
+var formCheck = false;
+formSubmit.addEventListener(`click` , (e)=>{
+    e.preventDefault();
+    formType.style.transition = `all 0.3s ease-in-out`;
+    formType.classList.toggle(`toggle-search`);
+    if(formCheck == false){
+        formType.style.borderLeft = `1px solid #fff`;
+        formCheck == true;
+    }else{
+        setTimeout(()=>{
+            formType.styleborderLeft = `none`;
+            formCheck == false;
+        },300)
+    }
+})

@@ -31,19 +31,22 @@
             border-left: 1px solid #fff;
         }
         p:nth-child(3){
-            padding-left: 12px;
+            padding: 0 12px;
         }
     }
     .bar-login{
+        position: relative;
         display: flex;
         p{
             display: flex;
             margin: 0 10px;
             @include Transition;
-            cursor: pointer;
             svg path{
                 @include Transition;
             }
+        }
+        p:nth-child(1){
+            cursor: pointer;
         }
         p:nth-child(1):hover{
             color: $hoverColor; 
@@ -56,9 +59,38 @@
             background-color: #fff;
             height: 19px;
             margin: 0 12px;
-
+        }
+        #search{
+            width: 20px;
+            input{
+                position: absolute;  
+                outline: none;          
+            }
+            input:nth-of-type(1){     
+                cursor: pointer;        
+                width: 15px;
+                height: 15px;
+                background-color: transparent;
+                font-size: 0;
+                border: none;
+            }
+            input:nth-of-type(2){
+                z-index: -1;
+                width: 0;
+                border: none;
+                right: 20px;
+                height: 20px;
+                background-color: #222020;
+                color: #fff;
+                top: -1px;
+                padding: 0 10px;
+            }
         }
     }
+}
+.toggle-search{
+    z-index: 1 !important;
+    width: 170px !important;
 }
 /////////////////////////////
 

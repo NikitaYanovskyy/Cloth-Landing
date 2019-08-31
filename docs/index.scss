@@ -97,7 +97,8 @@ li{
             padding-left: 24px;
         }
     }
-    .bar-login{     
+    .bar-login{   
+        margin-right: 20px;  
         p:nth-child(3){
             margin-right: 24px;
         }
@@ -422,9 +423,6 @@ li{
         }
     }
     /////////////////////////////////////////////////Brands
-    .brands-carousel-element:first-child{
-        margin-left: 40px !important;
-    }
     .brand-mobile-btn{
         display: block;
     }

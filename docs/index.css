@@ -65,10 +65,11 @@
 }
 
 .top-bar .bar-info p:nth-child(3) {
-  padding-left: 12px;
+  padding: 0 12px;
 }
 
 .top-bar .bar-login {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,12 +82,15 @@
   margin: 0 10px;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  cursor: pointer;
 }
 
 .top-bar .bar-login p svg path {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+.top-bar .bar-login p:nth-child(1) {
+  cursor: pointer;
 }
 
 .top-bar .bar-login p:nth-child(1):hover {
@@ -102,6 +106,41 @@
   background-color: #fff;
   height: 19px;
   margin: 0 12px;
+}
+
+.top-bar .bar-login #search {
+  width: 20px;
+}
+
+.top-bar .bar-login #search input {
+  position: absolute;
+  outline: none;
+}
+
+.top-bar .bar-login #search input:nth-of-type(1) {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  font-size: 0;
+  border: none;
+}
+
+.top-bar .bar-login #search input:nth-of-type(2) {
+  z-index: -1;
+  width: 0;
+  border: none;
+  right: 20px;
+  height: 20px;
+  background-color: #222020;
+  color: #fff;
+  top: -1px;
+  padding: 0 10px;
+}
+
+.toggle-search {
+  z-index: 1 !important;
+  width: 170px !important;
 }
 
 nav {
@@ -535,6 +574,10 @@ nav .busket li:last-of-type {
 
 .categories h2 {
   margin: 20px 0;
+}
+
+.categories h5 {
+  margin: 0 5px;
 }
 
 .categories-carousel {
@@ -992,6 +1035,9 @@ li {
   .top-bar .bar-info p:nth-child(1) {
     padding-left: 24px;
   }
+  .top-bar .bar-login {
+    margin-right: 20px;
+  }
   .top-bar .bar-login p:nth-child(3) {
     margin-right: 24px;
   }
@@ -1276,9 +1322,6 @@ li {
   }
   footer form {
     width: 80%;
-  }
-  .brands-carousel-element:first-child {
-    margin-left: 40px !important;
   }
   .brand-mobile-btn {
     display: block;
